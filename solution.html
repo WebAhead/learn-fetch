@@ -9,10 +9,23 @@
     <script>
       /* TASK 1 */
 
+      // `https://api.github.com/users/${username}
+
+
       const getUser = username =>
-        fetch(`https://api.github.com/users/${username}`).then(response =>
+        fetch(`https://api.github.com/users/${username}`,
+        {headers:{Authorization:"token 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"}}).then(response =>
           response.json()
         );
+
+
+
+
+
+
+
+
+
 
       getUser("oliverjam")
         .then(userData => console.log(userData))
